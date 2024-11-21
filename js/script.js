@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			menuToggle.setAttribute('aria-expanded', !isVisible);
 	});
 
-	// Optional: Reset the `data-visible` attribute on resize
 	window.addEventListener('resize', () => {
 			if (window.innerWidth >= 768) {
 					nav.setAttribute('data-visible', 'true');
@@ -17,3 +16,4 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 	});
 });
+

@@ -127,9 +127,18 @@
                 </div>
             </div>
         </div>
-        <footer class="site-footer">© 2024 | All Rights Reserved</footer>
+        <footer class="site-footer">
+            <div class="footer-content">
+                Built by
+                <a class="footer-link" href="https://selynt.com">
+                    Selynt.com
+                </a>
+                <span class="footer-year"></span>
+            </div>
+        </footer>
     </div>
-
-</body>
-
+    <script>
+        document.querySelector('.footer-year').textContent = new Date().getFullYear();
+    </script>
+    </body>
 </html>

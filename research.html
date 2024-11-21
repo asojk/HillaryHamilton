@@ -15,43 +15,85 @@
 </head>
 <body>
     <div class="page-container">
-    <header class="header">
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <p><a href="images/CV_Hillary_Hamilton.pdf" target="_blank" class="cv-link">View/Download CV (PDF)</a></p>
-        </ul>
-      </header>
-    <div class="site-container">
-        <div class="sidebar">
+        <header class="header">
+            <input class="menu-btn"
+                type="checkbox"
+                id="menu-btn" />
+            <label class="menu-icon"
+                for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <p><a href="images/CV_Hillary_Hamilton.pdf"
+                        target="_blank"
+                        class="cv-link">View/Download CV (PDF)</a></p>
+            </ul>
+        </header>
+        <div class="site-container">
+            <div class="sidebar">
 
-            <div class="profile-pic-container">
-                <img src="images/Headshot.jpg" alt="Profile Picture" loading="lazy">
+                <div class="profile-pic-container">
+                    <img src="images/Headshot.jpg"
+                        alt="Profile Picture"
+                        loading="lazy">
+                </div>
+
+                <h1>Hillary Hamilton</h1>
+                <p>PhD Candidate in Small Group & Organizational Communications</p>
+
+                <div class="social-links">
+
+
+                    <a href="https://www.researchgate.net/profile/Hillary-Hamilton-2"
+                        title="Research Gate"
+                        aria-label="Research Gate Profile"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/rg.svg"
+                            alt="Research Gate"
+                            class="custom-icon">
+                    </a>
+
+                    <a href="https://orcid.org/0000-0003-2634-7427"
+                        title="ORCiD"
+                        aria-label="ORCiD Profile"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/oid.svg"
+                            alt="ORCiD"
+                            class="custom-icon">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/hillary-hamilton-256343102"
+                        title="LinkedIn"
+                        aria-label="LinkedIn Profile"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/li.svg"
+                            alt="LinkedIn"
+                            class="custom-icon">
+                    </a>
+
+                    <a href="https://journals.sagepub.com/authored-by/Hamilton/Hillary"
+                        title="Sage Journals"
+                        aria-label="Sage Journals Profile"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/sage.svg"
+                            alt="Sage Journals"
+                            class="custom-icon">
+                    </a>
+
+                    <a href="mailto:hrosehamilton@gmail.com"
+                        title="Email"
+                        aria-label="Contact via Email">
+                        <img src="images/mail.svg"
+                            alt="Email"
+                            class="custom-icon">
+                    </a>
+
+                </div>
             </div>
-
-            <h1>Hillary Hamilton</h1>
-            <p>PhD Candidate in Small Group & Organizational Communications</p>
-
-            <div class="social-links">
-
-                <a href="#" title="Research Gate" aria-label="Research Gate Profile">
-                    <img src="images/rg.svg" alt="Research Gate" class="custom-icon"></a>
-
-                <a href="https://orcid.org/0000-0003-2634-7427" title="ORCiD" aria-label="ORCiD Profile">
-                    <img src="images/oid.svg" alt="ORCiD" class="custom-icon"></a>
-                        
-                <a href="www.linkedin.com/in/hillary-hamilton-256343102" title="LinkedIn" aria-label="LinkedIn Profile">
-                    <img src="/images/li.svg" alt="linkedin icon" class="custom-icon"></a>
-
-                <a href="#" title="Google Scholar" aria-label="Google Scholar Profile">
-                    <img src="images/gschol.svg" alt="Google Scholar" class="custom-icon"></a>
-
-                <a href="#" title="Email" aria-label="Contact via Email">
-                    <img src="images/mail.svg" alt="email icon" class="custom-icon"></a>
-            </div>
-        </div>
 
         <div class="main-content">
             <h1>Research</h1>
@@ -69,8 +111,19 @@
             </div>
         </div>
     </div>
-    <footer class="site-footer">© 2024 | All Rights Reserved</footer>
-    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            Built by
+            <a class="footer-link" href="https://selynt.com">
+                Selynt.com
+            </a>
+            <span class="footer-year"></span>
+        </div>
+    </footer>
+</div>
+<script>
+    document.querySelector('.footer-year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
 
