@@ -1,0 +1,195 @@
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+    margin: 4px;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.header li a {
+  display: inline-flex;
+  padding: 10px 10px;
+  text-decoration: none;
+	text-decoration: none;
+	color: var(--primary-text);
+	font-size: 0.9rem;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: var(--accent);
+}
+
+.cv-link {
+	display: inline-block;
+	padding: 8px 16px;
+	color: var(--primary-text);
+	background-color: white;
+	border: 0.5px solid var(--accent);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 1rem;
+	font-weight: 500;
+	transition: background-color 0.3s ease;
+	margin-right: 2rem;
+	font-size: 0.9rem;
+}
+
+.cv-link:hover {
+	background-color: #e2e2e2;
+	transition: background-color 0.3s ease;
+}
+
+/* menu */
+
+.header .menu {
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 48em) {
+  .header li {
+    float: right;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 47.99em) {
+  .header .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+  }
+
+  .header .menu li, .header .menu .cv-link {
+    margin: 10px 0;
+    width: 100%;
+    text-align: right;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .header .menu-btn:checked ~ .menu {
+    max-height: 500px; /* Adjust this value as needed */
+    opacity: 1;
+  }
+
+  .header .menu-btn:checked ~ .menu li,
+  .header .menu-btn:checked ~ .menu .cv-link {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s; /* Slight delay for a smoother appearance */
+  }
+
+  .header li a,
+  .header .cv-link {
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
+  .header .menu li:last-child {
+    margin-bottom: 0;
+  }
+
+  .cv-link {
+    margin-right: 0;
+    text-align: center;
+    margin-top: 10px; /* Add some space above the button */
+  }
+}
